@@ -13,9 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>CypherEdu</name>
     <description>CypherEdu</description>
-    <properties>
-        <java.version>11</java.version>
-    </properties>
+
 
     <dependencies>
         <dependency>
