@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Шифр Цезаря, Шифр Цезаря, Применение, Математическая модель">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Страница 1</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/caesar.css" media="screen">
+
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Страница 1">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-xl-mode">
+
+<header></header>
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-c8d3">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Шифр Цезаря</h1>
+        <div class="u-border-3 u-border-palette-1-base u-container-style u-expanded-width u-group u-group-1">
+            <div class="u-container-layout u-container-layout-1"></div>
+        </div>
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-2">
+                            <div class="u-expanded-width u-form u-form-1">
+                                <form action="#" method="POST"
+                                      class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom"
+                                      name="form" style="padding: 10px;">
+
+
+                                    <div class="u-form-group u-form-name">
+                                        <label for="name-192e" class="u-label">Информация для кодирования</label>
+                                        <input type="text" placeholder="Введите данные для кодирования //латинский алфавит" id="name-192e" name="text"
+                                               class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                                               required="">
+                                    </div>
+                                    <div class="u-form-email u-form-group">
+                                        <label for="email-192e" class="u-label">Ключ</label>
+                                        <input type="text" placeholder="Введите ключ" id="email-192e"
+                                               name="number"
+                                               class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                                               required="">
+                                    </div>
+                                    <input type="text" name="isEncrypt" style="visibility: hidden" value="true">
+                                    <div class="u-align-left u-form-group u-form-submit">
+                                        <button type="submit">Закодировать</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-valign-middle u-container-layout-3">
+                            <div class="u-align-left u-border-3 u-border-grey-40 u-container-style u-group u-group-2">
+                                <div class="u-container-layout u-valign-top u-container-layout-4">
+                                    <h5 class="u-text u-text-2">{{encrypt}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-2" id="carousel_d1c0">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-border-3 u-border-palette-1-base u-container-style u-expanded-width u-group u-group-1">
+            <div class="u-container-layout u-container-layout-1"></div>
+        </div>
+        <div class="u-clearfix u-expanded-width u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout">
+                <div class="u-layout-row">
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
+                        <div class="u-container-layout u-container-layout-2">
+                            <div class="u-expanded-width u-form u-form-1">
+                                <form action="#" method="POST"
+                                      class="u-clearfix u-form-spacing-10 u-form-vertical u-inner-form" source="custom"
+                                      name="form" style="padding: 10px;">
+                                    <div class="u-form-group u-form-name">
+                                        <label for="name-192e" class="u-label">Инфорация для декодирования</label>
+                                        <input type="text" placeholder="Введите данные для декодирования //латинский алфавит" id="name-192e" name="text"
+                                               class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                                               required="">
+                                    </div>
+                                    <div class="u-form-email u-form-group">
+                                        <label for="email-192e" class="u-label">Ключ</label>
+                                        <input type="text" placeholder="Введите ключ для декодирования" id="email-192e"
+                                               name="number"
+                                               class="u-border-1 u-border-grey-30 u-input u-input-rectangle u-white"
+                                               required="">
+                                    </div>
+                                    <input type="text" name="isEncrypt" style="visibility: hidden" value="false">
+                                    <div class="u-align-left u-form-group u-form-submit">
+                                        <button type="submit">Декодировать</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+                        <div class="u-container-layout u-valign-middle u-container-layout-3">
+                            <div class="u-align-left u-border-3 u-border-grey-40 u-container-style u-group u-group-2">
+                                <div class="u-container-layout u-valign-top u-container-layout-4">
+                                    <h5 class="u-text u-text-1">{{decrypt}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-3" id="sec-7514">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h1 style="text-align: left;">Шифр Цезаря</h1>
+            <p id="isPasted" style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Это вид шифра подстановки, в котором каждый символ в открытом тексте заменяется символом, находящимся на некотором постоянном числе позиций левее или правее него в алфавите. Например, в шифре со сдвигом вправо на 3, А была бы заменена на Г, Б станет Д, и так далее.</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Шифр назван в честь римского полководца Гая Юлия Цезаря, использовавшего его для секретной переписки со своими генералами.</span>
+            </p>
+        </div>
+        <img class="u-expanded-width u-image u-image-default u-image-1"
+             src="images/encrypt/caesar/0b9f730b-b6c2-1814-5d6f-5801d1530809.jpg" alt="" data-image-width="828"
+             data-image-height="376">
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-4" id="sec-3b53">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h1 style="text-align: left;">Применение</h1>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Шаг шифрования, выполняемый шифром Цезаря, часто включается как часть более сложных схем, таких как шифр Виженера, и всё ещё имеет современное приложение в системе ROT13. Как и все моноалфавитные шифры, шифр Цезаря легко взламывается методом грубой силы и не имеет почти никакого применения на практике.&nbsp;</span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-5" id="sec-c583">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h1 style="text-align: left;">
+                <span style="line-height: 2.0;">Математическая модель</span>
+            </h1>
+            <p id="isPasted">
+                <span style="font-size: 1.25rem;">Если сопоставить каждому символу алфавита его порядковый номер (нумеруя с 0), то шифрование и дешифрование можно выразить формулами модульной арифметики:</span>
+            </p>
+            <p>
+                <span style="font-size: 1.5625rem; font-weight: 700;">y=(x+k) mod &nbsp;n</span>
+            </p>
+            <p>
+                <span style="font-size: 1.5625rem; font-weight: 700;">x=(y-k) mod n</span>
+            </p>
+            <p>
+                <span style="font-size: 1.25rem;">где x — символ открытого текста, y — символ шифрованного текста, &nbsp;n — мощность алфавита, а &nbsp;k&nbsp; — ключ.</span>
+            </p>
+            <p>
+                <span style="font-size: 1.25rem;">С точки зрения математики шифр Цезаря является частным случаем аффинного шифра.</span>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<footer ></footer>
+<script>
+    fetch('./blocks/header.html').then(response => response.text()).then(data => document.querySelector('header').outerHTML = data);
+    fetch('./blocks/footer.html').then(response => response.text()).then(data => document.querySelector('footer').outerHTML = data);
+</script>
+
+</body>
+</html>

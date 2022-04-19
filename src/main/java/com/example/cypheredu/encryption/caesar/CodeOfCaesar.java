@@ -1,11 +1,13 @@
 package com.example.cypheredu.encryption.caesar;
 
 import com.example.cypheredu.encryption.Encryption;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+@Component
 public class CodeOfCaesar implements Encryption {
 //    public static void main(String[] args) throws IOException {
 //
@@ -56,6 +58,7 @@ public class CodeOfCaesar implements Encryption {
         return newStr.toString();
     }
 
+    @Override
     public String decrypt(String text, int delta){
 
         StringBuilder newStr = new StringBuilder();

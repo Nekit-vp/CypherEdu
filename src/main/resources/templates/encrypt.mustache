@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="Шифрование, Криптография, Виды алгоритмов шифрования, Шифр Цезаря, Надежность симметричных алгоритмов, ​Виды алгоритмов симметричного шифрования, ​Advanced Encryption Standard (AES), ​Rivest cipher 4 (RC4), ​Достоинства и недостатки симметричного шифрования, ​Асимметричное шифрование, RSA">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Шифрование</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/encrypt.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Шифрование">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-xl-mode">
+
+<header></header>
+
+<section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="1200"
+         data-image-height="800" id="sec-ec1e">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-title u-text-1">Шифрование</h1>
+        <p class="u-large-text u-text u-text-variant u-text-2"> -&nbsp;<b>преобразование информации, которое делает
+            исходные данные нечитаемыми и труднораскрываемыми без знания ключа.</b>
+        </p>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-2" id="sec-d791">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h1 style="text-align: left;">
+                <span style="line-height: 2.0;">Криптография&nbsp;</span>
+            </h1>
+            <p style="text-align: justify;">
+            <span style="font-size: 1.25rem;">Наука о методах преобразования (шифро­вания) информации в целях ее защиты от незаконных пользова­телей. В современных криптосистемах шифр получают из ис­ходного текста <span
+                    style="font-weight: 700;">кодированием&nbsp;</span>его символов, производимым на основе выбранного <span
+                    style="font-weight: 700;">алгоритма шифрования и ключа</span>, указы­вающего, как именно происходит сопоставление символов ис­ходного текста с символами кода.&nbsp;
+            </span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-3" id="sec-3817">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-1">Стойкость алгоритма</h3>
+        <p class="u-align-justify u-text u-text-2"> Надежность шифрующего алгоритма, часто называемая его&nbsp;<b><i>стойкостью</i></b>,
+            определяется тем, насколько легко можно взломать шифр.&nbsp;<br>Принято считать, что надежность шифра
+            определяется только&nbsp;<b><i>секретностью</i></b>&nbsp;используемого ключа, сам же алгоритм шифрования
+            предположительно известен противнику. Стойкость используемых в настоящее время алгоритмов шифрования
+            обес­печивается высокой вычислительной сложностью задачи выясне­ния значения ключа.
+        </p>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-image u-shading u-section-4" src="" data-image-width="1200"
+         data-image-height="750" id="sec-4f39">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-title u-text-1">Виды алгоритмов шифрования</h1>
+        <p class="u-large-text u-text u-text-variant u-text-2"><b>Все способы&nbsp;<b>шифрования</b>&nbsp;можно
+            разделить на два&nbsp;<b>вида</b>:</b>
+        </p>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-5" id="sec-b707">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span
+                            class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="images/encrypt/23.png"
+                                                                                           alt=""></span>
+                        <h3 class="u-text u-text-1"> Симметричное</h3>
+                        <p class="u-text u-text-2"> для&nbsp;<b>шифрования</b>&nbsp;и расшифровки информации применяется
+                            один и тот же криптографический ключ.
+                        </p>
+                    </div>
+                </div>
+                <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span
+                            class="u-file-icon u-icon u-text-palette-1-base u-icon-2"><img src="images/encrypt/24.png"
+                                                                                           alt=""></span>
+                        <h3 class="u-text u-text-3"> Асимметричное&nbsp;</h3>
+                        <p class="u-text u-text-4"> для шифрования и расшифровки используется два разных ключа.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-6" id="sec-17d6">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-1"> Симметричное шифрование</h3>
+        <p class="u-align-justify u-text u-text-2"> Cпособ шифрования данных, при котором один и тот же ключ
+            используется и для кодирования, и для восстановления информации. До 1970-х годов, когда появились первые
+            асимметричные шифры, оно было единственным криптографическим методом.</p>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-7" id="sec-97da">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <p id="isPasted">
+                <span style="font-size: 1.5625rem; font-weight: 700;">Принцип работы симметричных алгоритмов</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">В целом симметричным считается любой шифр, использующий один и тот же секретный ключ для шифрования и расшифровки. </span>
+            </p>
+        </div>
+        <img class="u-expanded-width u-image u-image-default u-image-1" src="images/encrypt/encryptkey.jpg" alt=""
+             data-image-width="1224" data-image-height="699">
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-8" id="sec-69bd">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Например, если алгоритм предполагает замену букв числами, то и у отправителя сообщения, и у его получателя должна быть одна и та же таблица соответствия букв и чисел: первый с ее помощью шифрует сообщения, а второй — расшифровывает.&nbsp;</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Однако такие простейшие шифры легко взломать — например, зная частотность разных букв в языке, можно соотносить самые часто встречающиеся буквы с самыми многочисленными числами или символами в коде, пока не удастся получить осмысленные слова. С использованием компьютерных технологий такая задача стала занимать настолько мало времени, что использование подобных алгоритмов утратило всякий смысл. </span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-9" id="sec-ff23">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-clearfix u-gutter-14 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1"
+                         src="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-default u-text-1">Шифр Цезаря</h2>
+                            <p class="u-align-center u-text u-text-2"> Также известный как шифр сдвига, код Цезаря или
+                                сдвиг Цезаря — один из самых простых и наиболее широко известных методов симметричного
+                                шифрования.</p>
+                            <a href="caesar" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-layout-cell-2"
+                         src="">
+                        <div class="u-container-layout u-container-layout-2" src="">
+                            <img class="u-expanded-height u-image u-image-1"
+                                 src="images/encrypt/1ceda210-8501-25a1-f5cb-7702aa743859.jpg" data-image-width="900"
+                                 data-image-height="900">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-10" id="sec-00c2">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h1 style="text-align: left;">
+                <span style="font-size: 1.75rem; font-weight: 700;">Надежность симметричных алгоритмов</span>
+            </h1>
+            <p id="isPasted" style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Современные симметричные алгоритмы считаются надежными, если отвечают следующим требованиям:</span>
+            </p>
+            <p style="text-align: justify;">
+            <span style="font-size: 1.25rem;">
+              <br>
+            </span>
+            </p>
+            <ul style="box-sizing: border-box; overflow-wrap: break-word; margin: -2rem 0px 2.4rem 2.4rem; padding: 0px; color: rgb(35, 38, 39); font-family: MuseoSans, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                <li style="box-sizing: border-box; font-size: 1.25rem; text-align: justify;">Выходные данные не должны
+                    содержать статистических паттернов исходных данных (как в примере выше: наиболее частотные символы
+                    осмысленного текста не должны соответствовать наиболее частотным символам шифра).
+                </li>
+                <li style="box-sizing: border-box; font-size: 1.25rem; text-align: justify;">Шифр должен быть нелинейным
+                    (то есть в шифрованных данных не должно быть закономерностей, которые можно отследить, имея на руках
+                    несколько открытых текстов и шифров к ним).
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-11" id="sec-1963">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-align-left u-text u-text-default u-text-1"> Виды алгоритмов симметричного шифрования</h1>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-12" id="sec-e43f">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span
+                            class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="images/encrypt/25.png"
+                                                                                           alt=""></span>
+                        <h3 class="u-text u-text-1">Блочные</h3>
+                        <p class="u-text u-text-2"> Блочные&nbsp;алгоритмы шифруют данные блоками фиксированной длины
+                            (64, 128 или другое количество бит в зависимости от алгоритма). Если все сообщение или его
+                            финальная часть меньше размера блока, система дополняет его предусмотренными алгоритмом
+                            символами, которые так и называются&nbsp;дополнением.</p>
+                    </div>
+                </div>
+                <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span
+                            class="u-file-icon u-icon u-text-palette-1-base u-icon-2"><img src="images/encrypt/26.png"
+                                                                                           alt=""></span>
+                        <h3 class="u-text u-text-3">Потоковые</h3>
+                        <p class="u-text u-text-4"> Потоковое шифрование данных предполагает обработку каждого бита
+                            информации с использованием&nbsp;гаммирования, то есть изменения этого бита с помощью
+                            соответствующего ему бита псевдослучайной секретной последовательности чисел, которая
+                            формируется на основе ключа и имеет ту же длину, что и шифруемое сообщение.&nbsp;</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-13" id="sec-fecc">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1"
+                         src="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-default u-text-1"> Advanced Encryption Standard
+                                (AES)</h2>
+                            <p class="u-align-center u-text u-text-2"> симметричный алгоритм <b>блочного</b> шифрования&nbsp;(размер
+                                блока 128 бит, ключ 128/192/256 бит), принятый в качестве стандарта шифрования США
+                            </p>
+                            <a href="aes" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1"
+                         src="" data-image-width="1280" data-image-height="720">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-14" id="sec-e21a">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1"
+                         src="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-default u-text-1"> Rivest cipher 4 (RC4)</h2>
+                            <p class="u-align-center u-text u-text-2"><b>Потоквый </b>симметричный шифр, широко
+                                применяющийся в различных системах защиты информации в компьютерных сетях
+                            </p>
+                            <a href="rc4" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1"
+                         src="" data-image-width="380" data-image-height="328">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-15" id="sec-fdf4">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1"> Достоинства и недостатки симметричного шифрования</h1>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-16" id="sec-59fc">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span
+                            class="u-file-icon u-icon u-text-palette-1-base u-icon-1"><img src="images/encrypt/27.png"
+                                                                                           alt=""></span>
+                        <h3 class="u-align-center u-text u-text-1">Достоинства</h3>
+                        <p class="u-align-left u-text u-text-2">&nbsp;- ​требуют меньше ресурсов<br>&nbsp;- высокая
+                            скорость шифрования<br>&nbsp;- устойчивы к атакам квантовых компьютеров
+                        </p>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span
+                            class="u-file-icon u-icon u-text-palette-1-base u-icon-2"><img src="images/encrypt/28.png"
+                                                                                           alt=""></span>
+                        <h3 class="u-align-center u-text u-text-3">Недостатки</h3>
+                        <p class="u-align-left u-text u-text-4">&nbsp;- обмен секретным ключем между отправителем и
+                            получателем</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-17" id="sec-b1b6">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <p id="isPasted" style="text-align: justify;">
+                <span style="font-size: 1.875rem; font-weight: 700;">Область применения симметричного шифрования</span>
+            </p>
+            <p id="isPasted" style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Симметричное шифрование используется для обмена данными во многих современных сервисах, часто в сочетании с асимметричным шифрованием. Например, мессенджеры защищают с помощью таких шифров переписку (при этом ключ для симметричного шифрования обычно доставляется в асимметрично зашифрованном виде), а сервисы для видеосвязи — потоки аудио и видео. В защищенном транспортном протоколе TLS симметричное шифрование используется для обеспечения конфиденциальности передаваемых данных.</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Симметричные алгоритмы не могут применяться для формирования цифровых подписей и сертификатов, потому что секретный ключ при использовании этого метода должен быть известен всем, кто работает с шифром, что противоречит самой идее электронной подписи (возможности проверки ее подлинности без обращения к владельцу).</span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-image u-shading u-section-18" src="" data-image-width="1200"
+         data-image-height="800" id="sec-a8ae">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-title u-text-1"> Асимметричное шифрование</h1>
+        <p class="u-large-text u-text u-text-variant u-text-2"> это метод шифрования данных, предполагающий
+            использование двух ключей — открытого и закрытого.</p>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-19" id="sec-c67c">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h3 class="u-text u-text-1"> Асимметричное шифрование</h3>
+        <p class="u-align-justify u-text u-text-2"> Асимметричное шифрование&nbsp;— это метод шифрования данных,
+            предполагающий использование двух ключей — открытого и закрытого. Открытый (публичный) ключ применяется для
+            шифрования информации и может передаваться по незащищенным каналам. Закрытый (приватный) ключ применяется
+            для расшифровки данных, зашифрованных открытым ключом. Открытый и закрытый ключи — это очень большие числа,
+            связанные друг с другом определенной функцией, но так, что, зная одно, крайне сложно вычислить второе.</p>
+    </div>
+</section>
+<section class="u-clearfix u-section-20" id="sec-ccba">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <img class="u-expanded-width u-image u-image-default u-image-1" src="images/encrypt/11.jpg" alt=""
+             data-image-width="786" data-image-height="426">
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-21" id="sec-a7cb">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <p id="isPasted">
+                <span style="font-size: 1.5625rem; font-weight: 700;">Принцип действия асимметричного шифрования</span>
+            </p>
+            <p id="isPasted" style="text-align: left;">
+                <span style="font-size: 1.25rem;">Схема передачи данных между двумя субъектами (А и Б) с использованием открытого ключа выглядит следующим образом:</span>
+            </p>
+            <p style="text-align: left;">
+                <br>
+            </p>
+            <ul style="box-sizing: border-box; overflow-wrap: break-word; margin: -2rem 0px 2.4rem 2.4rem; padding: 0px; color: rgb(35, 38, 39); font-family: MuseoSans, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                <li style="box-sizing: border-box; text-align: left; font-size: 1.25rem;">Субъект А генерирует пару
+                    ключей, <span style="font-weight: 700;">открытый&nbsp;</span>и <span style="font-weight: 700;">закрытый&nbsp;</span>(публичный
+                    и приватный).
+                </li>
+                <li style="box-sizing: border-box; text-align: left; font-size: 1.25rem;">Субъект А передает открытый
+                    ключ субъекту Б. Передача может осуществляться по незащищенным каналам.
+                </li>
+                <li style="box-sizing: border-box; text-align: left; font-size: 1.25rem;">Субъект Б шифрует пакет данных
+                    при помощи полученного открытого ключа и передает его А. Передача может осуществляться по
+                    незащищенным каналам.
+                </li>
+                <li style="box-sizing: border-box; text-align: left; font-size: 1.25rem;">Субъект А расшифровывает
+                    полученную от Б информацию при помощи секретного, закрытого ключа.
+                </li>
+            </ul>
+            <p style="text-align: left;">
+                <span style="font-size: 1.25rem;">В такой схеме перехват любых данных, передаваемых по незащищенным каналам, не имеет смысла, поскольку восстановить исходную информацию возможно только при помощи закрытого ключа, известного лишь получателю и не требующего передачи.</span>
+            </p>
+        </div>
+        <img class="u-expanded-width u-image u-image-default u-image-1" src="images/encrypt/open_close_key.gif" alt=""
+             data-image-width="340" data-image-height="120">
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-22" id="sec-0562">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <p id="isPasted">
+                <span style="font-size: 1.75rem; font-weight: 700;">Применение асимметричных алгоритмов</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Асимметричное шифрование решает главную проблему симметричного метода, при котором для кодирования и восстановления данных используется один и тот же ключ. Если передавать этот ключ по незащищенным каналам, его могут перехватить и получить доступ к зашифрованным данным. С другой стороны, асимметричные алгоритмы гораздо медленнее симметричных, поэтому во многих криптосистемах применяются и те и другие.&nbsp;</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Также асимметричные алгоритмы применяются для создания электронных подписей для подтверждения авторства и (или) целостности данных. При этом подпись генерируется с помощью закрытого ключа, а проверяется с помощью открытого.&nbsp;</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.75rem; font-weight: 700;">Наиболее распространенные алгоритмы асимметричного шифрования:</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.75rem; font-weight: 700;">&nbsp;</span>
+            </p>
+            <ul id="isPasted"
+                style="box-sizing: border-box; overflow-wrap: break-word; margin: -2rem 0px 2.4rem 2.4rem; padding: 0px; color: rgb(35, 38, 39); font-family: MuseoSans, Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 300; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(255, 255, 255); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">
+                <li style="box-sizing: border-box; font-size: 1.25rem;">RSA (аббревиатура от Rivest, Shamir и Adelman,
+                    фамилий создателей алгоритма) — алгоритм, в основе которого лежит вычислительная сложность
+                    факторизации (разложения на множители) больших чисел.&nbsp;
+                </li>
+                <li style="box-sizing: border-box; font-size: 1.25rem;">DSA (Digital Signature Algorithm, «алгоритм
+                    цифровой подписи») — алгоритм, основанный на сложности вычисления дискретных логарифмов.
+                    Используется для генерации цифровых подписей.&nbsp;
+                </li>
+                <li style="box-sizing: border-box; font-size: 1.25rem;">Схема Эль-Гамаля — алгоритм, основанный на
+                    сложности вычисления дискретных логарифмов. Лежит в основе DSA и устаревшего российского стандарта
+                    ГОСТ 34.10–94. Применяется как для шифрования, так и для создания цифровых подписей.
+                </li>
+                <li style="box-sizing: border-box; font-size: 1.25rem;">ECDSA (Elliptic Curve Digital Signature
+                    Algorithm) — алгоритм, основанный на сложности вычисления дискретного логарифма в группе точек
+                    эллиптической кривой. Применяется для генерации цифровых подписей, в частности для подтверждения
+                    транзакций в криптовалюте Ripple.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-23" id="sec-99a6">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1"
+                         src="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-default u-text-1">RSA</h2>
+                            <p class="u-align-center u-text u-text-2"> криптографический алгоритм с открытым ключом,
+                                основывающийся на вычислительной сложности задачи факторизации больших целых чисел.</p>
+                            <a href="rsa" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1"
+                         src="" data-image-width="512" data-image-height="512">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-24" id="sec-221b">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <p id="isPasted">
+                <span style="font-size: 1.75rem; font-weight: 700;">Надежность асимметричного шифрования</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Теоретически приватный ключ от асимметричного шифра можно вычислить, зная публичный ключ и механизм, лежащий в основе алгоритма шифрования (последнее — открытая информация). Надежными считаются шифры, для которых это нецелесообразно с практической точки зрения. Так, на взлом шифра, выполненного с помощью алгоритма RSA с ключом длиной 768 бит на компьютере с одноядерным процессором AMD Opteron с частотой 2,2 ГГц, бывшем в ходу в середине 2000-х, ушло бы 2000 лет.&nbsp;</span>
+            </p>
+            <p style="text-align: justify;">
+                <span style="font-size: 1.25rem;">Что касается эффективности поиска ключа, то она незначительно меняется с течением времени, но может скачкообразно увеличиться с появлением кардинально новых технологий (например, квантовых компьютеров). В этом случае может потребоваться поиск альтернативных подходов к шифрованию.&nbsp;</span>
+            </p>
+            <p style="text-align: justify;">
+                <br>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<footer></footer>
+<script>
+    fetch('./blocks/header.html').then(response => response.text()).then(data => document.querySelector('header').outerHTML = data);
+    fetch('./blocks/footer.html').then(response => response.text()).then(data => document.querySelector('footer').outerHTML = data);
+</script>
+
+</body>
+</html>
