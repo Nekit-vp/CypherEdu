@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Хеш-фукнкия MD5">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Хеширование</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/hash.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Хеширование">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-xl-mode">
+
+<header></header>
+
+<section class="u-align-center u-clearfix u-image u-shading u-section-1" src="images/hash/hash.jpg" id="sec-e5c4"
+         data-image-width="1440"
+         data-image-height="560">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-title u-text-1">Хеширование</h1>
+        <p class="u-large-text u-text u-text-variant u-text-2">- это ​преобразование произвольного массива данных в
+            состоящую из букв и цифр строку фиксированной длины</p>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-2" id="sec-676d">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h2 style="text-align: left;">Что такое хеш?</h2>
+            <p style="text-align: left;">
+            <span style="line-height: 2.0;">
+              <img align="center" style="width: 621px;" class="fr-dii fr-fic fr-fir" src="images/hash/hash_1.jpg"
+                   width="570">Если коротко, то криптографическая хеш-функция, чаще называемая просто хешем, — это математический алгоритм, преобразовывающий произвольный массив данных в состоящую из букв и цифр строку фиксированной длины. Причем при условии использования того же типа хеша длина эта будет оставаться неизменной, вне зависимости от объема вводных данных. Криптостойкой хеш-функция может быть только в том случае, если выполняются главные требования: стойкость к восстановлению хешируемых данных и стойкость к коллизиям, то есть образованию из двух разных массивов данных двух одинаковых значений хеша. &nbsp;
+            </span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-3" id="sec-a432">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Требования к крипкостойкости</h1>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-4" id="sec-a1e5">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1"><span
+                            class="u-file-icon u-icon u-icon-circle u-icon-1"><img src="images/hash/860774.png"
+                                                                                   alt=""></span>
+                        <h3 class="u-text u-text-1">Необратимость</h3>
+                        <p class="u-text u-text-2"> Стойкость к восстановлению хешируемых данных</p>
+                    </div>
+                </div>
+                <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2"><span
+                            class="u-file-icon u-icon u-icon-circle u-icon-2"><img src="images/hash/149751.png"
+                                                                                   alt=""></span>
+                        <h3 class="u-text u-text-3">Отсутствие коллизий</h3>
+                        <p class="u-text u-text-4"> Стойкость к коллизиям</p>
+                    </div>
+                </div>
+                <div class="u-align-center u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3"><span
+                            class="u-icon u-icon-3"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice"
+                                                         viewBox="0 0 60 60" style=""><use
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-0840"></use></svg><svg
+                            class="u-svg-content" viewBox="0 0 60 60" x="0px" y="0px" id="svg-0840"
+                            style="enable-background:new 0 0 60 60;"><g><path d="M55.014,45.389l-9.553-4.776C44.56,40.162,44,39.256,44,38.248v-3.381c0.229-0.28,0.47-0.599,0.719-0.951
+		c1.239-1.75,2.232-3.698,2.954-5.799C49.084,27.47,50,26.075,50,24.5v-4c0-0.963-0.36-1.896-1-2.625v-5.319
+		c0.056-0.55,0.276-3.824-2.092-6.525C44.854,3.688,41.521,2.5,37,2.5s-7.854,1.188-9.908,3.53
+		c-2.368,2.701-2.148,5.976-2.092,6.525v5.319c-0.64,0.729-1,1.662-1,2.625v4c0,1.217,0.553,2.352,1.497,3.109
+		c0.916,3.627,2.833,6.36,3.503,7.237v3.309c0,0.968-0.528,1.856-1.377,2.32l-8.921,4.866c-2.9,1.582-4.701,4.616-4.701,7.92V57.5
+		h46v-4.043C60,50.019,58.089,46.927,55.014,45.389z"></path><path d="M17.983,44.025l8.921-4.866c0.367-0.201,0.596-0.586,0.596-1.004v-2.814c-0.885-1.232-2.446-3.712-3.337-6.91
+		C23.1,27.399,22.5,25.994,22.5,24.5v-4c0-1.124,0.352-2.219,1-3.141v-4.733c-0.034-0.383-0.074-1.269,0.096-2.395
+		C22.219,9.751,20.687,9.5,19,9.5c-10.389,0-10.994,8.855-11,9v4.579c-0.648,0.706-1,1.521-1,2.33v3.454
+		c0,1.079,0.483,2.085,1.311,2.765c0.825,3.11,2.854,5.46,3.644,6.285v2.743c0,0.787-0.428,1.509-1.171,1.915l-6.653,4.173
+		C1.583,48.134,0,50.801,0,53.703V57.5h12.5v-4.238C12.5,49.409,14.601,45.87,17.983,44.025z"></path>
+</g></svg></span>
+                        <h3 class="u-text u-text-5">Невозможность поиска второго прообраза</h3>
+                        <p class="u-text u-text-6"><b> Сопротивление поиску второго прообраза</b>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-5" id="sec-ec45">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h2 style="text-align: left;">Для чего используется хеш?</h2>
+            <p>Отличный вопрос. Однако ответ не так прост, поскольку криптохеши используются для огромного количества
+                вещей.&nbsp;</p>
+            <p>
+            <span style="line-height: 2.0;">
+              <img align="center" style="width: 382px;" class="fr-dii fr-fic fr-fil" src="images/hash/hash_password.jpg"
+                   width="570">Для нас с вами, простых пользователей, наиболее распространенная область применения хеширования — хранение паролей. К примеру, если вы забыли пароль к какому-либо онлайн-сервису, скорее всего, придется воспользоваться функцией восстановления пароля. В этом случае вы, впрочем, не получите свой старый пароль, поскольку онлайн-сервис на самом деле не хранит пользовательские пароли в виде обычного текста. Вместо этого он хранит их в виде хеш-значений. То есть даже сам сервис не может знать, как в действительности выглядит ваш пароль. Исключение составляют только те случаи, когда пароль очень прост и его хеш-значение широко известно в кругах взломщиков. Таким образом, если вы, воспользовавшись функцией восстановления, вдруг получили старый пароль в открытом виде, то можете быть уверены: используемый вами сервис не хеширует пользовательские пароли, что очень плохо. &nbsp;
+            </span>
+            </p>
+            <h2 style="text-align: left;">Хеш для проверки целостности файлов</h2>
+            <p style="text-align: left;">Хэш-коды также могут использоваться для проверки целостности данных,
+                пересылаемых по незащищенным каналам. Хэш-код полученных данных можно сравнить с хэш-кодом этих же
+                данных, вычисленным перед их передачей, и на основании этого определить, подвергались ли данные
+                изменениям.&nbsp;</p>
+            <p id="isPasted">
+                <span style="font-size: 1.875rem;">Хеш в повседневной жизни</span>
+            </p>
+            <p>В повседневной жизни мы, сами того не подозревая, иногда пользуемся простейшими хешами. Например,
+                представьте, что вы совершаете переезд и упаковали все вещи по коробкам и ящикам. Погрузив их в
+                грузовик, вы фиксируете количество багажных мест (то есть, по сути, количество коробок) и запоминаете
+                это значение. По окончании выгрузки на новом месте, вместо того чтобы проверять наличие каждой коробки
+                по списку, достаточно будет просто пересчитать их и сравнить получившееся значение с тем, что вы
+                запомнили раньше. Если значения совпали, значит, ни одна коробка не потерялась.&nbsp;</p>
+            <p>
+                <img src="images/hash/hash_.png" width="570" style="width: 570px;" class="fr-dib fr-fic">
+            </p>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-6" id="sec-61d7">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-1"> Популярные алгоритмы хеширования</h1>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-7" id="sec-e3f8">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1"
+                         src="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-default u-text-1">Message Digest 5</h2>
+                            <p class="u-align-center u-text u-text-2"> MD5 сейчас редко используется, но он был одним из
+                                самых распространенных алгоритмов хеширования в ранней криптографии. Это пример
+                                алгоритма хеширования, из-за которого, поскольку он обладает рядом уязвимостей, включая
+                                частоту коллизий, ни одна криптовалюта не использует 128-битные выходы.&nbsp;</p>
+                            <a href="md5" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1"
+                         src="" data-image-width="1097" data-image-height="513">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-8" id="sec-0ed9">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1"
+                         src="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-default u-text-1"> Secure Hash Algorithm (SHA)</h2>
+                            <p class="u-align-center u-text u-text-2"> Secure Hash Algorithm (SHA) - это семейство
+                                криптографических хеш-функций, которые используются большинством криптовалют. Они были
+                                разработаны Национальным институтом стандартов и технологий. Последний был выпущен в
+                                2000 году. Считаются одними из самых безопасных алгоритмов хеширования.&nbsp;</p>
+                            <a href="sha" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1"
+                         src="" data-image-width="1280" data-image-height="674">
+                        <div class="u-container-layout u-container-layout-2" src=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-grey-5 u-section-9" id="sec-91aa">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-layout-wrap-1">
+            <div class="u-layout" style="">
+                <div class="u-layout-row" style="">
+                    <div class="u-container-style u-layout-cell u-left-cell u-size-30 u-size-xs-60 u-layout-cell-1"
+                         src="">
+                        <div class="u-container-layout u-valign-middle u-container-layout-1">
+                            <h2 class="u-align-center u-text u-text-default u-text-1"> Scrypt</h2>
+                            <p class="u-align-center u-text u-text-2"> Эта хеш-функция требует больших вычислительных
+                                ресурсов, поэтому расчет требует больше времени. Из-за этого, а также из-за того, что
+                                требуется большой объем памяти, алгоритм хэширования Scrypt наиболее безопасен. Litecoin
+                                - самая популярная криптовалюта, которая использует Scrypt для защиты своей цепочки
+                                блоков.&nbsp;</p>
+                            <a href="scrypt" class="u-btn u-btn-round u-button-style u-radius-50 u-btn-1">learn more</a>
+                        </div>
+                    </div>
+                    <div class="u-align-center u-container-style u-image u-layout-cell u-right-cell u-size-30 u-size-xs-60 u-image-1"
+                         src="" data-image-width="1097" data-image-height="513">
+                        <div class="u-container-layout u-valign-middle u-container-layout-2" src=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-10" id="sec-0138">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h5 class="u-text u-text-default u-text-1">
+            ---------------------------------------------------------------------</h5>
+        <h1 class="u-text u-text-default u-text-2">Заключение</h1>
+        <p class="u-align-left u-text u-text-3"> В любой технологии шифрования все сводится к решению одной из двух
+            задач:&nbsp;<br>
+            <br>1) увеличения сложности внутренних операций хэширования;<br>
+            <br>2) увеличения длины hash-выхода данных с расчетом на то, что вычислительные мощности атакующих не смогут
+            эффективно вычислять коллизию.<br>
+            <br>И, несмотря на появление в будущем квантовых компьютеров, специалисты уверены, что правильные
+            инструменты (то же хеширование) способны выдержать испытания временем, с учетом того, что они еще будут
+            развиваться. Ведь с увеличением вычислительных мощностей снижается математическая формализация структуры
+            внутренних алгоритмических хэш-конструкций. А квантовые вычисления наиболее эффективны лишь в отношении к
+            вещам, имеющим строгую математическую структуру.
+        </p>
+    </div>
+</section>
+
+
+<footer></footer>
+<script>
+    fetch('./blocks/header.html').then(response => response.text()).then(data => document.querySelector('header').outerHTML = data);
+    fetch('./blocks/footer.html').then(response => response.text()).then(data => document.querySelector('footer').outerHTML = data);
+</script>
+
+</body>
+</html>

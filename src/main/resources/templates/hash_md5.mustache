@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="​Message Digest 5, Алгоритм MD5, Шаг 1. Выравнивание потока, Шаг 2. Добавление длины сообщения, Шаг 3. Инициализация буфера, Шаг 4. Вычисление в цикле, Шаг 5. Результат вычислений">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>MD5</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/md5.css" media="screen">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="MD5">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-xl-mode">
+
+
+<header></header>
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-b98d">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1"> Message Digest 5</h1>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-2" id="sec-362d">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="u-form u-form-1">
+            <form action="md5" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
+                  style="padding: 15px;" source="email" name="form">
+                <div class="u-form-group u-form-name u-label-none u-form-group-1">
+                    <input type="text" placeholder="Введите данные для хеширования" id="name-6797" name="text"
+                           class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+                </div>
+                <div class="u-align-left u-form-group u-form-submit u-form-group-2">
+                    <button type="submit">Захешировать</button>
+                </div>
+            </form>
+        </div>
+        <div class="u-border-3 u-border-grey-40 u-container-style u-group u-group-1">
+            <div class="u-container-layout u-container-layout-1">
+                <h5 class="u-align-center u-text u-text-1"> {{text}}</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-clearfix u-section-3" id="sec-2659">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-align-center u-clearfix u-rich-text u-text u-text-1">
+            <h1 style="text-align: center;">Алгоритм MD5</h1>
+            <p style="text-align: center;">На вход алгоритма поступает входной поток данных, хеш которого необходимо
+                найти. Длина сообщения измеряется в битах и может быть любой (в том числе нулевой). Запишем длину
+                сообщения в L. Это число целое и неотрицательное. Кратность каким-либо числам необязательна. После
+                поступления данных идёт процесс подготовки потока к вычислениям. <span style="line-height: 2.0;">
+              <img src="images/hash/md5/hashmd5.png" align="center" style="width: 583px;" class="fr-dib fr-fic" width="300">&nbsp;
+            </span>
+            </p>
+        </div>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-4" id="sec-74d1">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <h2 style="text-align: left;">
+                <span style="line-height: 2.0;">Шаг 1. Выравнивание потока</span>
+            </h2>
+            <p id="isPasted">Сначала к концу потока дописывают единичный бит.</p>
+            <p>Затем добавляют некоторое число нулевых бит такое, чтобы новая длина потока &nbsp;L' стала сравнима с 448
+                по модулю 512, &nbsp;L'=512 * N+448}). Выравнивание происходит в любом случае, даже если длина исходного
+                потока уже сравнима с 448.</p>
+            <h2 style="text-align: left;">
+                <span style="line-height: 2.0;">Шаг 2. Добавление длины сообщения</span>
+            </h2>
+            <p style="text-align: left;">В конец сообщения дописывают 64-битное представление длины данных (количество
+                бит в сообщении) до выравнивания. Сначала записывают младшие 4 байта, затем старшие. Если длина
+                превосходит 2^64-1, то дописывают только младшие биты (эквивалентно взятию по модулю 2^64. После этого
+                длина потока станет кратной 512. Вычисления будут основываться на представлении этого потока данных в
+                виде массива слов по 512 бит.&nbsp;</p>
+            <h2 id="isPasted">Шаг 3. Инициализация буфера</h2>
+            <p>Для вычислений инициализируются четыре переменные размером по 32 бита, начальные значения которых
+                задаются шестнадцатеричными числами&nbsp;</p>
+            <p id="isPasted">А = 01 23 45 67; // 67452301h</p>
+            <p>В = 89 AB CD EF; // EFCDAB89h</p>
+            <p>С = FE DC BA 98; // 98BADCFEh</p>
+            <p>D = 76 54 32 10. // 10325476h</p>
+            <p>В этих переменных будут храниться результаты промежуточных вычислений. Начальное состояние ABCD
+                называется инициализирующим вектором.&nbsp;</p>
+            <h2 id="isPasted">Шаг 4. Вычисление в цикле</h2>
+            <p style="text-align: left;">Заносим в блок данных элемент n из массива 512-битных блоков. Сохраняются
+                значения A, B, C и D, оставшиеся после операций над предыдущими блоками (или их начальные значения, если
+                блок первый).&nbsp;</p>
+            <p style="text-align: left;">AA = A&nbsp;</p>
+            <p style="text-align: left;">BB = B</p>
+            <p style="text-align: left;">CC = C</p>
+            <p style="text-align: left;">DD = D&nbsp;</p>
+            <h4 style="text-align: left;">Этап 1</h4>
+            <p id="isPasted">/* [abcd k s i] a = b + ((a + F(b,c,d) + X[k] + T[i]) &lt;&lt;&lt; s). */</p>
+            <p>[ABCD &nbsp;0 7 &nbsp;1][DABC &nbsp;1 12 &nbsp;2][CDAB &nbsp;2 17 &nbsp;3][BCDA &nbsp;3 22 &nbsp;4]</p>
+            <p>[ABCD &nbsp;4 7 &nbsp;5][DABC &nbsp;5 12 &nbsp;6][CDAB &nbsp;6 17 &nbsp;7][BCDA &nbsp;7 22 &nbsp;8]</p>
+            <p>[ABCD &nbsp;8 7 &nbsp;9][DABC &nbsp;9 12 10][CDAB 10 17 11][BCDA 11 22 12]</p>
+            <p>[ABCD 12 7 13][DABC 13 12 14][CDAB 14 17 15][BCDA 15 22 16]</p>
+            <h4>И так далее .... каждый этап</h4>
+            <p>Суммируем с результатом предыдущего цикла:&nbsp;</p>
+            <p id="isPasted">A = AA + A</p>
+            <p>B = BB + B</p>
+            <p>C = CC + C</p>
+            <p>D = DD + D</p>
+            <p>После окончания цикла необходимо проверить, есть ли ещё блоки для вычислений. Если да, то переходим к
+                следующему элементу массива (n + 1) и повторяем цикл.&nbsp;</p>
+            <h2 id="isPasted">Шаг 5. Результат вычислений</h2>
+            <p>Результат вычислений находится в буфере ABCD, это и есть хеш. Если выводить побайтово, начиная с младшего
+                байта A и заканчивая старшим байтом D, то мы получим MD5-хеш. </p>
+            <p>
+                <br>
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<footer ></footer>
+<script>
+    fetch('./blocks/header.html').then(response => response.text()).then(data => document.querySelector('header').outerHTML = data);
+    fetch('./blocks/footer.html').then(response => response.text()).then(data => document.querySelector('footer').outerHTML = data);
+</script>
+
+</body>
+</html>

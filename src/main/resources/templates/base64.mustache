@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords"
+          content="Base - 64, Что это такое?, Для чего используется?, Алгоритм работы, Декодирование, Применение алгоритма Base-64">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>Base-64</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="css/base64.css" media="screen">
+    <meta name="generator" content="Nicepage 4.8.2, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
+
+    <meta name="theme-color" content="#478ac9">
+    <meta property="og:title" content="Base-64">
+    <meta property="og:type" content="website">
+</head>
+<body class="u-body u-xl-mode">
+
+<header></header>
+
+<section class="u-align-center u-clearfix u-section-1" id="sec-cafc">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Base - 64</h1>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-2" id="sec-1705">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-form u-form-1">
+            <form action="base64" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
+                  style="padding: 15px;" source="email" name="form">
+                <div class="u-form-group u-form-name u-label-none u-form-group-1">
+                    <input type="text" placeholder="Введите текст для кодирования" id="name-6797" name="text"
+                           class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+                    <input type="text" style="visibility: hidden" name="isEncode" value="true">
+                </div>
+                <div class="u-align-left u-form-group u-form-submit u-form-group-2">
+                    <button type="submit">Закодировать</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="u-border-3 u-border-grey-40 u-container-style u-group u-group-1">
+            <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <h5 class="u-align-center u-text u-text-1">{{encode}}</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-2" id="sec-1705">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <div class="u-form u-form-1">
+            <form action="base64" method="POST" class="u-clearfix u-form-spacing-15 u-form-vertical u-inner-form"
+                  style="padding: 15px;" source="email" name="form">
+                <div class="u-form-group u-form-name u-label-none u-form-group-1">
+                    <input type="text" placeholder="Введите текст для декодирования" id="name-6797" name="text"
+                           class="u-border-1 u-border-grey-30 u-input u-input-rectangle" required="">
+                    <input type="text" style="visibility: hidden" name="isEncode" value="false">
+                </div>
+                <div class="u-align-left u-form-group u-form-submit u-form-group-2">
+                    <button type="submit">Декодировать</button>
+                </div>
+
+            </form>
+        </div>
+        <div class="u-border-3 u-border-grey-40 u-container-style u-group u-group-1">
+            <div class="u-container-layout u-valign-middle u-container-layout-1">
+                <h5 class="u-align-center u-text u-text-1">{{decode}}</h5>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-3" id="sec-d67a">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Что это такое?</h1>
+        <p class="u-text u-text-2"> Base64 - один из самых распространенных методов кодирования, используемых для
+            передачи 8-битного байт-кода в сети. Base64 - это метод для представления двоичных данных, основанный на 64
+            печатных символах</p>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-grey-5 u-section-4" id="sec-0b23">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Для чего используется?</h1>
+        <p class="u-text u-text-2"> Base64 обычно используется для передачи двоичных данных по протоколу HTTP.Так как
+            протокол HTTP является текстовым протоколом, двоичные данные необходимо преобразовать в символьные данные по
+            протоколу HTTP. Однако прямое преобразование не будет работать. Поскольку передача по сети может передавать
+            только печатные символы. Что такое печатные символы? В коде ASCII 33 символа от 0 до 31 и 128 являются
+            управляющими символами, а 95 символов от 32 до 127 являются печатными символами, то есть при сетевой
+            передаче могут передаваться только эти 95 символов, а символы, не входящие в этот диапазон Невозможно
+            передать. Так как я могу перенести других персонажей? Одним из способов является использование Base64.</p>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-5" id="sec-7260">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Алгоритм работы</h1>
+        <p class="u-text u-text-2">
+            <span style="font-size: 1.25rem;">Base64&nbsp;– это стандарт кодирования данных используя только&nbsp;64&nbsp;символа&nbsp;ASCII, отсюда и название. Используются символы&nbsp;A-Z,&nbsp;a-z&nbsp;и&nbsp;0-9&nbsp;и еще 2 символа различаются в зависимости от реализации, наиболее распространён вариант с символами&nbsp;+&nbsp;и&nbsp;/.</span>
+        </p>
+        <img class="u-image u-image-default u-image-1" src="images/encode/base64/base64.gif" alt="" data-image-width="650"
+             data-image-height="365">
+        <h4 class="u-text u-text-3">Кодирование Base-64</h4>
+    </div>
+</section>
+<section class="u-align-left u-clearfix u-section-6" id="sec-2fb1">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <div class="fr-view u-clearfix u-rich-text u-text u-text-1">
+            <p>
+                <br>
+            </p>
+            <p style="text-align: left;">Изначально на вход поступает массив байт, каждый байт — это число от 0 до 255,
+                то есть максимальное количество бит в числе равно восьми (255 в двоичной системе счисления это
+                11111111). Необходимо взять 3 байта, это 24 бита, которые разбивают на 4 части – по 6 бит. Число из 6
+                бит (в десятичной системе) и будет представлять из себя очередной индекс в таблице для получения символа
+                кодирования (6 бит – в двоичном виде 111111, в десятичном виде это число 63). Если размер исходного
+                массива не кратен 3, тогда итоговую строку следует дополнить символом = до размера кратного 3.</p>
+        </div>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-7" id="sec-ce93">
+    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h1 class="u-text u-text-default u-text-1">Декодирование</h1>
+        <p class="u-text u-text-2"> Декодирование информации из Base64&nbsp;строки представляет из себя обратный
+            процесс. Нам необходимо разбить строку по&nbsp;4&nbsp;символа, получить их значения из таблицы символов
+            Base64, затем полученную группу из&nbsp;24&nbsp;бит необходимо разбить на&nbsp;3&nbsp;части – получится&nbsp;3&nbsp;значения
+            по&nbsp;8&nbsp;бит, которые мы помещаем в массив байт. Повторять данный процесс необходимо до конца
+            имеющейся строки. Символ&nbsp;=&nbsp;не будет участвовать в процессе, он будет только показывать, какое
+            количество бит необходимо взять из конца строки.</p>
+        <img class="u-image u-image-default u-image-1" src="images/encode/base64/decode.gif" alt="" data-image-width="650"
+             data-image-height="365">
+        <h5 class="u-text u-text-3">Декодирование Base-64</h5>
+    </div>
+</section>
+<section class="u-align-center u-clearfix u-section-8" id="sec-d699">
+    <div class="u-clearfix u-sheet u-sheet-1">
+        <h2 class="u-text u-text-default u-text-1">Применение алгоритма Base-64</h2>
+        <div class="u-expanded-width u-list u-list-1">
+            <div class="u-repeater u-repeater-1">
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-1"><span
+                            class="u-file-icon u-icon u-spacing-15 u-text-palette-1-base u-icon-1"><img
+                            src="images/encode/base64/26.png" alt=""></span>
+                        <div class="u-container-style u-group u-group-1">
+                            <div class="u-container-layout u-valign-top u-container-layout-2">
+                                <h5 class="u-text u-text-2">Электронная почта</h5>
+                                <p class="u-text u-text-3"> Транспортная система электронной почты предназначена только
+                                    для обычного ASCII текста, поэтому используют Base-64</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-3"><span
+                            class="u-file-icon u-icon u-spacing-15 u-text-palette-1-base u-icon-2"><img
+                            src="images/encode/base64/27.png" alt=""></span>
+                        <div class="u-container-style u-group u-video-cover u-group-2">
+                            <div class="u-container-layout u-valign-top u-container-layout-4">
+                                <h5 class="u-text u-text-default u-text-4">Web-приложения</h5>
+                                <p class="u-text u-text-5"> Благодаря Base64, в html документы можно включать бинарный
+                                    контент, создавая единый документ без отдельно расположенных картинок и прочих
+                                    дополнительных файлов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-5"><span
+                            class="u-file-icon u-icon u-spacing-15 u-icon-3"><img src="images/encode/base64/2824599.png"
+                                                                                  alt=""></span>
+                        <div class="u-container-style u-group u-video-cover u-group-3">
+                            <div class="u-container-layout u-valign-top u-container-layout-6">
+                                <h5 class="u-text u-text-default u-text-6">Base-64 in URL</h5>
+                                <p class="u-text u-text-7"> Gриложения кодируют двоичные данные для удобства включения в
+                                    URL, скрытые поля форм.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-7"><span
+                            class="u-file-icon u-icon u-spacing-15 u-text-palette-1-base u-icon-4"><img
+                            src="images/encode/base64/29.png" alt=""></span>
+                        <div class="u-container-style u-group u-video-cover u-group-4">
+                            <div class="u-container-layout u-valign-top u-container-layout-8">
+                                <h5 class="u-text u-text-default u-text-8">Хранение паролей</h5>
+                                <p class="u-text u-text-9"> Операционные системы семейства Unix&nbsp;сохраняют
+                                    вычисленные с помощью&nbsp;crypt&nbsp;хеши паролей в файл&nbsp;/password&nbsp;используя
+                                    кодировку&nbsp;<i>Base-64</i>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-9"><span
+                            class="u-file-icon u-icon u-spacing-15 u-text-palette-1-base u-icon-5"><img
+                            src="images/encode/base64/30.png" alt=""></span>
+                        <div class="u-container-style u-group u-video-cover u-group-5">
+                            <div class="u-container-layout u-valign-top u-container-layout-10">
+                                <h5 class="u-text u-text-default u-text-10"> JPEG и PNG</h5>
+                                <p class="u-text u-text-11"> Base-64 применяется для кодирования изображений формата
+                                    JPEG и PNG, для вставки их в электронные книги формата FB2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-container-style u-list-item u-repeater-item">
+                    <div class="u-container-layout u-similar-container u-container-layout-11"><span
+                            class="u-file-icon u-icon u-spacing-15 u-text-palette-1-base u-icon-6"><img
+                            src="images/encode/base64/31.png" alt=""></span>
+                        <div class="u-container-style u-group u-video-cover u-group-6">
+                            <div class="u-container-layout u-valign-top u-container-layout-12">
+                                <h5 class="u-text u-text-default u-text-12">SMS</h5>
+                                <p class="u-text u-text-13"> Приложения, использующие кодировку Base64 для отправки
+                                    небольших изображений посредством длинных SMS</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer></footer>
+<script>
+    fetch('./blocks/header.html').then(response => response.text()).then(data => document.querySelector('header').outerHTML = data);
+    fetch('./blocks/footer.html').then(response => response.text()).then(data => document.querySelector('footer').outerHTML = data);
+</script>
+
+</body>
+</html>
