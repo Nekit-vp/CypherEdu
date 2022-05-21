@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-@Component
+@Component("md5")
 public class MD5Example implements Hashing{
 
     public static MessageDigest md;
